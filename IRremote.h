@@ -351,7 +351,7 @@ class IRsend
 #		endif
         //......................................................................
 #		if SEND_TECO
-			void  sendTeco (uint16_t data, bool repeat = true) ;
+			void  sendTeco (unsigned long data,  int nbits) ;
 #		endif
 } ;
 
