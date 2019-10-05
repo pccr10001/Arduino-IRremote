@@ -8,6 +8,21 @@
 //                        TTT   EE      CC    C OO   OO 
 //                        TTT   EEEEEEE  CCCCC   OOOO0  
 //==============================================================================
+// Model: 5M000C789G011
+
+// Protocol
+// Payload (BIN) {Field(bit count)}
+//   0011, {Power}, 00, {Func(2)}, {Wind(2)}, {ION(3)}, {Timer(2)}, 0, {Off Time(4)}, {Dir(2)}, 00, {Temp(5)}, {Sleep(1)}
+// Field (LSB ... MSB)
+//   Power: On(1), Off(0)
+//   Function: Cold(1), Dehumidifier(2), Warm(3)
+//   Wind Level: Step1(3), Step2(2), Step1(1), Auto(0)
+//   ION: On(7), Off(0)
+//   Timer: On(3), Off(0)
+//   Off Time: Timer Off(15), Hours(1~12)
+//   Wind Direction: Horizontal(1), 2, 3, 4, Vertical(5), Auto(0)
+//   Temperture: 32 - i, 31(1), 25(7), 16(16)
+//   Sleep mode: On(1), Off(0)
 
 #define TECO_BITS          31
 #define TECO_HDR_MARK    4700
