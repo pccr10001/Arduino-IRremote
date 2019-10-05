@@ -90,7 +90,7 @@ int  IRrecv::decode (decode_results *results)
 	if (decodeLegoPowerFunctions(results))  return true ;
 #endif
 
-#if DECODE_LEGO_PF
+#if DECODE_TECO
 	DBG_PRINTLN("Attempting Teco Functions");
 	if (decodeTeco(results))  return true ;
 #endif
